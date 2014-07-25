@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+       <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <title>Facelet Title</title>
+      
+    </h:head>
+ 
+    <h:body>
+   <div id="header"> 
+       <ul id="navigation">
+      
+      <li id="link1" class="selected"><a href="home.html">Home</a></li>
+      <li id="link2"><a href="zoo.html">Juegos</a></li>
+      <li id="link3"><a href="contact.html">Contactanos </a></li>
+      <li id="link4"><a href="gallery.html">Galeria</a></li>
+      <li id="link5"><a href="index.jsp ">Salir</a></li>
+      <li id="link6"><a href="">  </a></li>   
+      </ul>
+  <a href="MenuEmpleado.jsp" style="background-color: #FF9900">ABSTRACCIÓN<img src="images/emple.jpg"/></a>
+ <a href="MenuEspecie.jsp">LÓGICO<img src="images/especies.jpg"/></a>
+ <a href="MenuZona.jsp">VERBAL<img src="images/jirafa.jpg"/></a>
+           
+  </div>
+        <p:dialog id="dgpanelnuevo" header="LOGIN" closable="false"
+                  modal="true" widgetVar="panelnuevo" visible="true" style="background-color:#FFFFFF">
+            <p:messages globalOnly="true"  />
+                     <p:growl id="mensajes" autoUpdate="true" life="10000" showDetail="true"/>
+                  
+            <h:form>
+               
+                <p:panelGrid columns="2" style="background-color:#875316">
+                 
+                    <h:outputText value="Número de cedula:" />
+                    <h:inputText value="#{sesion.usr.cedulausuario}"
+                                 required="true" 
+                                      requiredMessage="Es necesario un codigo"/>
+                    <h:outputText value="Password:" />
+                    <h:inputText value="#{sesion.usr.clave}"
+                                 required="true" 
+                                      requiredMessage="Es necesario un codigo"/>
+                </p:panelGrid>
+                 
+                <p:commandButton value="Ingresar" id="btnAceptar"
+                                 action="#{sesion.autenticar()}"
+                                 
+                                />
+                <p:commandButton value="Cancelar" id="btnCancelar"
+                                  action="#{sesion.autenticar()}"/>
+                
+            </h:form>
+   
+        </p:dialog>
+           
+    </h:body>
+             
+</html>

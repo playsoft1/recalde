@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                 <link rel="stylesheet" href="css/style.css" type="text/css" />
+               
+                <title>PrimeFaces</title>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+
+            <p:layout fullPage="true">
+
+                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                    Header
+                </p:layoutUnit>
+
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                   
+    
+                </p:layoutUnit>
+
+                <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
+                    <p:menu>
+
+                        <p:submenu label="Resources">
+                            <p:menuitem value="Ingreso al Juego" url="http://localhost:8080/PSofth/faces/login.xhtml" />
+                           <p:menuitem value="Administrar Juego" url="faces/loginadminjuego.xhtml" />
+                            <p:menuitem value="Instrucciones del Juego" url="http://www.primefaces.org/documentation.html" />
+                            <p:menuitem value="Informacion Importante" url="http://forum.primefaces.org/" />
+                            <p:menuitem value="Estudiantes" url="http://www.primefaces.org/themes.html" />
+
+                        </p:submenu>
+
+                    </p:menu>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="center">
+                        <div id="header"> 
+       <ul id="navigation">
+      
+      <li id="link1" class="selected"><a href="home.html">Home</a></li>
+      <li id="link2"><a href="zoo.html">Juegos</a></li>
+      <li id="link3"><a href="contact.html">Contactanos </a></li>
+      <li id="link4"><a href="gallery.html">Galeria</a></li>
+      <li id="link5"><a href="index.jsp ">Salir</a></li>
+      <li id="link6"><a href="">  </a></li>   
+      </ul>
+  <a href="MenuEmpleado.jsp" style="background-color: #FF9900">ABSTRACCIÓN<img src="images/emple.jpg"/></a>
+ <a href="MenuEspecie.jsp">LÓGICO<img src="images/especies.jpg"/></a>
+ <a href="MenuZona.jsp">VERBAL<img src="images/jirafa.jpg"/></a>
+           
+  </div>
+                </p:layoutUnit>
+
+            </p:layout>
+
+        </h:body>
+
+    </f:view>
+</html>
+
